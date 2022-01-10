@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script  type="text/javascript" src="payment.js"></script>
+    <link rel="stylesheet" href="style3.css">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+</head>
+<body onload="myFunction()">
+    <script>
+    function myFunction(){    
+        alert('This is Sale Page.')
+    }
+    </script>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="img/logo.png" width="150px" height="150px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="home.html">Home</a>
+                    <a class="nav-link" href="skills.html">Skills And Education</a>
+                    <a class="nav-link active" aria-current="page" href="sale.html">Sale</a>
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+      <div id="banner">
+          <div class="banner-block"><br>
+              <h1 class="banner-text" id="banner-text">Book Sale</h1>
+          </div>
+      </div>
+  </header>
+  <br><br>
+  
+    <form class="cart" id="cart-hplus">
+        <br>
+
+        <h2><b> Book Sale</b></h2>
+        <h4>Please fill up all the details below.</h4>
+
+        <br>
+
+        <script>
+          document.getElementById("txt-q-book1").addEventListener("keypress", myFunction);
+          
+          function myFunction() {
+            document.getElementById("txt-q-book1").style.backgroundColor = "blue";
+          }
+        </script>
+
+        <div class="book1">
+          <img id="book" class="book" src="img/book1.jpg">
+          <h4>Computing Programming For Beginners</h4>
+          <p>Price: RM 35</p>
+          <p>Quantity desired : <input type="text" id="txt-q-book1"></p>
+        </div>
+
+        <script>
+          function myFunction2() {
+            document.getElementById("txt-q-book2").style.backgroundColor = "green";
+          }
+          </script>
+        <br>
+        <div class="book2">
+          <img id="book" class="book" src="img/book2.png">
+          <h4>C++ Programming Basic</h4>
+          <p>Price: RM 28 </p>
+          <p>Quantity desired : <input type="text" id="txt-q-book2" onfocus="myFunction2()"></p>
+        </div>
+
+        <br>
+
+        <script>
+          function myFunction3() {
+            document.getElementById("txt-q-book3").style.backgroundColor = "yellow";
+          }
+          </script>
+        <div class="book3">
+          <img id="book" class="book" src="img/book3.jpg">
+          <h4>HTML & CSS For Beginners</h4>
+          <p>Price: RM 50.80 </p>
+          <p>Quantity desired : <input type="text" id="txt-q-book3" onfocus="myFunction3()"></p>
+        </div>
+
+        <br>
+        <script>
+          function myFunction4() {
+            document.getElementById("txt-q-book4").style.backgroundColor = "red";
+          }
+          </script>
+        <div class="book4">
+          <img id="book" class="book" src="img/book4.jpg">
+          <h4>Python Programming</h4>
+          <p>Price: RM 38.50 </p>
+          <p>Quantity desired : <input type="text" id="txt-q-book4" onfocus="myFunction4()"></p>
+        </div>
+
+        <br>
+
+        <script>
+          function myFunction5() {
+            document.getElementById("txt-q-book5").style.backgroundColor = "pink";
+          }
+          </script>
+        <br>
+        <div class="book5">
+          <img id="book" class="book" src="img/book5.jpg">
+          <h4>Learning: Javascript</h4>
+          <p>Price: RM 45.60 </p>
+          <p>Quantity desired : <input type="text" id="txt-q-book5" onfocus="myFunction5()"></p>
+        </div>
+
+        <br>
+
+        <div class="group method"> 
+          <label for="r-method-pickup">Shipping and Handling:</label><br> 
+          <input type="radio" value="pickup" name="r_method" id="r-method-pickup" checked> 
+          <label for="r-method-pickup">Pickup (free)</label><br> 
+          <input type="radio" value="delivery" name="r_method" id="r-method-delivery">
+          <label for="r-method-delivery">Delivery (RM4/item)</label><br>
+          <input type="radio" value="pos" name="r_method" id="r-method-pos">
+        <label for="r-method-pos">Pos (RM12/item)</label> 
+      </div>
+
+        <br>
+
+        <input type="submit" value="Display Total" id="btn-displaytotal">
+        <input class="btnPlaceOrder" type="button" value="Place Order" onclick="alert('Thanks You for Your Order');">
+
+        <br>
+        <div class="group calc"> 
+          <p> 
+              <label for="btn-estimate">Click to estimate:</label><br> 
+              <input type="submit" value="Estimate Total" id="btn-estimate"> 
+              <input type="text" id="txt-estimate" placeholder="$0.00"> 
+          </p> 
+      </div>
+      
+      <br>
+        <div id="results"></div>
+      </form>
+      <br><hr>
+    <center>
+      <h6>&copy;Created by Nur Syamsina</h6>
+    </center>
+</body>
+</html>

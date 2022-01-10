@@ -1,0 +1,34 @@
+body{
+    background: linear-gradient(to bottom right, #33ccff 0%, #ff99ff 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'PT Serif', serif;
+}
+.navbar-nav{
+    font-size: 20px;
+}
+#banner{
+    background: url('img/banner.jpg');
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+}
+
+.banner-block{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold; 
+ }
+ 
+ .banner-block h1{
+     text-transform: uppercase;
+ }
+
+.cart{
+    margin-left: 50px;
+}
+.book{
+    width: 300px;
+    height: 400px;
+}
